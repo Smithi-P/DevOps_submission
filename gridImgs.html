@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="stylesheetMilkshakeImg.css"> 
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("MyApp", []);
+        app.controller("MyController", function ($scope) {
+            $scope.layout = 'grid';
+            $scope.Data = [
+                { Name: "Frozen Whitechocolate Shake", Path: "https://i2.wp.com/www.whiskynsunshine.com/wp-content/uploads/2019/10/frozen-white-chocolate-milkshake-1.jpg?fit=735%2C1028&ssl=1" },
+                { Name: "Choconut Shake", Path: "https://www.cravingsofalunatic.com/wp-content/uploads/2017/11/Chocolate-Coconut-Milkshakes-8-Edited.jpg" },
+                { Name: "Unicorn Shake", Path: "https://s3-us-west-2.amazonaws.com/rufflesandrainboots/wp-content/uploads/2018/04/22180252/All-Natural-Unicorn-Milkshake-720x720.jpg" },
+                { Name: "Bourbon Vanilla Shake", Path: "https://www.liquor.com/thmb/aKKaVda9AqymRmHdxQ-fNNgN72k=/720x540/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__08__31105320__11-Essential-Cocktails-for-Your-September-Parties-bourbon-vanilla-and-chocolate-milkshake-720x720-slideshow-0a6671c2a7444f76b27f6fb6608a6fd4.jpg" },
+                ];
+        });
+    </script>
+</head>
+<body>
+
+    <marquee><h1>Try out our New Shakes</h1></marquee>
+    
+    <div ng-app="MyApp" ng-controller="MyController">
+        <div class="bar">
+            <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'">
+            </a><a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'">
+            </a>
+        </div>
+        <ul ng-show="layout == 'grid'" class="grid">
+            <li ng-repeat="data in Data"><img ng-src="{{data.Path}}" height="150px" width="150px" /></li>
+        </ul>
+        <ul ng-show="layout == 'list'" class="list">
+            <li ng-repeat="data in Data">
+                <img ng-src="{{data.Path}}" height="75px" width="75px" />
+                <p>{{data.Name}}</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

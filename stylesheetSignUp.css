@@ -1,0 +1,47 @@
+/*body{
+    
+    background-color: #ecc9ff;
+}
+
+h1{
+    font-family: Papyrus;
+    color: black;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #cc19f0;
+    
+
+}
+*/
+h2{
+    text-align: center;
+    font-family: Gill Sans;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #cc19f0;
+    
+    
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-image: url("https://fooddoodles.com/wp-content/uploads/2011/06/Blueberry-Milkshake-1.jpg");
+    opacity: 0.7;
+    background-position: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+
+.button{
+    
+    font-size:25px;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;    
+}

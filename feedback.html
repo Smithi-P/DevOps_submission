@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"> </script>
+    <script src="feedbackJS.js" type="text/javascript"></script>
+    <style>
+        body{
+            background-image: url("https://www.mealgarden.com/media/recipe/2019/08/bbigstock-blueberry-smoothies-juice-a-ta-245599555.jpeg");
+            background-repeat: no-repeat;
+            background-position:top;
+            background-attachment: scroll;
+            background-color:#cccccc;
+            background-size:cover;
+            
+
+        }
+        h1{
+          font-family: Papyrus;
+          color: #ffb8dc;
+          font-size: 50px;
+          text-shadow: 2px 2px 5px rgb(201, 0, 134);
+        }
+
+        button{
+            border: 4px solid hotpink;
+            font-size: 30px;
+            font-family:Script MT;
+            background-color: black;
+            color:white;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        button:hover{
+            color:gray;
+            background-color: whitesmoke;
+            font-size:40px;
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+
+<body ng-app="myNoteApp" ng-controller="myNoteCtrl">
+
+    <h1>FEEDBACK</h1>
+    <textarea style="background-color: hsl(288, 64%, 85%);" ng-model="message" cols="80"rows="20"></textarea>
+    <p align="center">
+        <button ng-click="save()">Submit</button>
+        <button ng-click="clear()">Reset</button>
+        
+    </p>
+    <script src="myNoteApp.js"></script>
+    <script src="myNoteCtrl.js"></script>
+
+</body>
+</html> 
+
+
+

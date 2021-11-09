@@ -1,0 +1,189 @@
+body{
+    background-color: #f0c9e7;
+}
+
+h1{
+    font-family: Papyrus;
+    color: #ff00c4;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+#intro{
+    text-align: center;
+    font-size: 30px;
+    font-family: Gloucester MT;
+    padding:10px;
+}
+
+
+
+
+
+#menuTable,td{
+    border: 3px dotted black;
+    border-collapse:collapse;
+    text-align: justify;   
+    
+    
+}
+
+#menuTable{
+    padding: 5px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.heading{
+    font-family: Kristen ITC;
+    color: black;
+    text-shadow: 2px 2px 5px red;
+    
+    
+}
+
+.menu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: MV Boli;
+    font-style: italic;
+    
+}
+
+.td1{
+    background-image: url("https://i2.wp.com/www.eatthis.com/wp-content/uploads/2020/01/how-to-make-a-milkshake-5.jpg?fit=1200%2C879&ssl=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7; 
+    width: 550px;
+    
+    
+}
+
+
+.td2{
+    background-image: url("https://lh3.googleusercontent.com/L0bi82LPD3vrht9vJxuadxQ_Iw9GRpg33Jpvv6x--zPCiCltbol9JkP7iS5NPIL4FH156yQAn6TLeihv0dogUHtKY-c=w800");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 550px;
+    
+}
+
+.td3{
+    background-image: url("https://img.etimg.com/thumb/width-1200,height-900,imgsize-1604599,resizemode-1,msid-65237848/magazines/panache/how-milkshakes-made-their-way-to-world-domination.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 550px;       
+
+}
+
+.td4{
+    background-image: url("https://images.eatthismuch.com/site_media/img/971403_tabitharwheeler_21276d22-69c2-49ec-9abd-6ae2bf363895.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 550px;
+
+}
+
+.menu ul{
+    background-color:white;
+    opacity: 0.7;
+    width:fit-content;
+
+}
+
+.pRate{
+    text-align: right;
+    padding-right: 20px;
+    text-shadow: 3px 3px 6px red;
+}
+
+#tag{
+    font-size: 50px;
+    font-family: Chiller;
+    color: purple;
+    padding:10px;
+    margin-top: 10px;
+}
+
+
+.filterDiv{
+    
+    margin-top: 30px;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+    padding: 10px 0px;
+
+
+}
+
+.filterbtn{
+
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: Eras ITC;
+    background-color: black;
+    color: white;
+    border: 3px solid hotpink;
+    cursor: pointer;
+    
+
+
+}
+
+
+.search{
+    margin-left:30px ;
+    margin-right:30px ;
+}
+
+
+#lowHighDiv{
+    width: 100%;
+    padding: 50px 0;
+    
+    margin-top: 20px;
+    background-color: #ffffff;
+    opacity: 0.7;
+
+    
+    
+  }
+
+  
+#searchDiv{
+    width: 100%;
+    padding: 50px 0;
+    margin-top: 20px;
+    background-color: #ffffff;
+    opacity: 0.7;
+
+
+
+  }
+
+  
+#calDiv{
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    opacity: 0.7;
+    
+  }
+#calDiv h2{
+    font-family: papyrus;
+    color:#ff00c4;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+
+}  

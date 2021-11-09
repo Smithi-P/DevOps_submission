@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Filter</title>
+        <link rel="stylesheet" href="stylesheetFilter.css"> 
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        
+    </head>
+    <body>
+
+        <div ng-app="myApp1" ng-controller="namesCtrl1">
+            <p>
+                Click the headings to change the sorting order:
+            </p>
+            
+
+            <table id="sortFilterTable">
+              <tr>
+                <th ng-click="orderByMe('shake')">Shakes</th>
+                <th ng-click="orderByMe('rate')">Rate</th>
+              </tr>
+
+              <tr ng-repeat="x in shakes | orderBy:myOrderBy">
+                <td>{{x.shake}}</td>
+                <td>{{x.rate}}</td>
+              </tr>
+            </table>
+            </div>
+            
+            <script>
+            angular.module('myApp1', []).controller('namesCtrl1', function($scope) {
+              $scope.shakes = [
+                {shake:'Exotic Shakes',rate:'220'},
+                {shake:'Fruity passion',rate:'250'},
+                {shake:'Classic Shakes',rate:'175'},
+                {shake:'Candy Crushers',rate:'230'},
+                
+              ];
+              $scope.orderByMe = function(x) {
+                $scope.myOrderBy = x;
+              }
+            });
+            </script>
+    </body>
+</html>

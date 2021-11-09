@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Shake it Up-SignUp</title>
+        <link rel="stylesheet" href="stylesheetSignUp.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </head>
+    
+    <body style="background-color: #ecc9ff;"  ng-app="">
+        <h1 style="margin-left:20px; padding-top:50px; font-family: Papyrus; font-size: 50px; text-shadow: 2px 2px 5px #cc19f0;">SHAKE it UP</h1>
+        
+        <div class="container">
+            <div>
+                <h2 style="font-family: Gill Sans; font-size: 50px;">Sign Up</h2>
+                <form action='f.html'; name = "myForm" class="" autocomplete="off">
+                    <input class="adjust" type="text" name="myfName" id="name" ng-model="myfName" placeholder="First Name" required>
+                    <span style="color:red" ng-show="myForm.myfName.$touched && myForm.myfName.$invalid"> first name is required.</span><br><br>
+                    <input class="adjust" type="text" name="mylName" id="name" ng-model="mylName" placeholder="Last Name" required>
+                    <span style="color:red" ng-show="myForm.mylName.$touched && myForm.mylName.$invalid"> last name is required.</span><br><br>
+                    <input class="adjust" type="text" name="Age" value="" placeholder="Age"><br><br>
+                    <input class="adjust" type="text" id="gender" value="" required placeholder="Gender"><br><br>
+                   
+                    Area :
+                                <input type="radio" name="area" value="Ashok Nagar">Ashok Nagar                
+                                <input type="radio" name="area" value="k.K Nagar">K.K Nagar
+                                <input type="radio" name="area" value="T.Nagar">T.Nagar<br><br>
+                                Address    :<br> <textarea id="signupaddr" name="addr" rows="4" cols="50" ></textarea><br><br>
+                    <input class="adjust" ng-model="mobile_number" name="mobile_number" type="text" id="phonenumber" value="" required placeholder="Phone Number"  ng-pattern="/^[7-9][0-9]{9}$/">
+                    <span style="color:red" ng-show="((myForm.mobile_number.$touched && myForm.mobile_number.$invalid)||(myForm.mobile_number.$error.pattern))">Please enter valid phone number!</span>
+                    <span style="color:red" ng-show="myForm.mobile_number.$error.required">Phone number is required!</span><br><br>
+                    <input class="adjust" type="email" name="email" id="emailid" value="" required placeholder="Email ID" ng-model="email">
+                    <span style="color:red" ng-show="myForm.email.$error.required">Email is required!</span><br><br>
+                    Username : <input type="text" name="username" value="" ng-model="username" required >
+                    <span style="color:red" ng-show="myForm.username.$touched && myForm.username.$invalid"> username is required.</span>
+                    <br><br>
+                Password : <input type="password" name="password" value="" ng-model="password" required >
+                <span style="color:red" ng-show="myForm.password.$touched && myForm.password.$invalid"> password is required.</span><br><br>
+                
+                   
+                    <input class="button signup" type="submit" name="" value="Submit">&emsp;
+                    <input class="button cancel" type="button" name="" value="Cancel" onclick="location.href='expt2_pg1.html';">
+                  </form>
+                                          
+            </div>
+        </div>
+        
+    </body>
+
+</html>

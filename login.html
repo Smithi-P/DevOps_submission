@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>SHAKE it Up-LoginSample</title>
+        <link rel="stylesheet" href="stylesheetLogin.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script rel="javascript/angularjs" src="loginJS.js"></script>
+
+    </head>
+    <body>     
+        <h1>SHAKE it UP</h1>
+        
+        
+        <div class="container">
+            
+            <div ng-app="">
+                
+                <h2>Login</h2>
+                <form>
+
+                    Username : <input type="text" name="username" value="" id="fieldUname" ng-model="firstname" ><br><br>            
+                    Password : <input type="password" name="password" value="" id="fieldpwd"><br><br>
+
+                </form>
+                <h3>Welcome Back {{firstname}}</h3>
+                
+                
+                <div id="buttons">
+                    <input type="button" value="Submit" class="button login" onclick="check()"> 
+                    <input type="button" value="Cancel" class="button cancel">
+
+                </div>                                          
+            </div>
+        </div>
+
+    </body>
+
+</html>

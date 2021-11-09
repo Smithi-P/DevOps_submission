@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Amount Calculator</title>
+<script language="javascript" type="text/javascript">
+function addition(){
+a=Number(document.calculator.number1.value);
+b=Number(document.calculator.number2.value);
+c=Number(document.calculator.number3.value);
+d=Number(document.calculator.number4.value);
+e=Number(document.calculator.number5.value);
+f=a+b+c+d+e;
+document.calculator.total.value=f;
+}
+</script>
+<style>
+    body{
+        background-color: #f0c9e7;
+    }
+
+    
+    h2{
+        font-family: Papyrus;
+        color: #ff00c4;
+        font-size: 50px;
+        text-shadow: 2px 2px 5px black;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <h2>Find your price:</h2>
+<form name="calculator">
+Shake 1: <input type="text" name="number1"><br><br>
+Shake 2: <input type="text" name="number2"><br><br>
+Shake 3: <input type="text" name="number3"><br><br>
+Shake 4: <input type="text" name="number4"><br><br>
+Shake 5: <input type="text" name="number5"><br><br>
+
+<input type="button" value="Total" onclick="javascript:addition();">
+<input type="text" name="total">
+</form>
+
+</body>
+</html> 

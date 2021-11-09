@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" href="stylesheetFilter.css">
+        <link rel="stylesheet" href="stylesheetMenuTable.css"> 
+
+    </head>
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<p>Search: <input type="text" ng-model="test"></p>
+
+
+<ul>
+  <li ng-repeat="x in names | filter:test">
+    {{ x }}
+  </li>
+</ul>
+
+
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.names = [
+        'Classic Shakes',
+        'Exotic Shakes',
+        'Fruity Passion',
+        'Candy Crushers',
+    ];
+});
+</script>
+
+</body>
+</html>

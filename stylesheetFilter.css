@@ -1,0 +1,12 @@
+body{
+    background-color: #f0c9e7;
+}
+
+table,td{
+    border: 3px dashed black;
+    border-collapse:collapse;
+    text-align: justify;  
+    padding: 10px; 
+        
+}
+

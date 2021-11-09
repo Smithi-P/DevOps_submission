@@ -1,0 +1,206 @@
+$bg-sidebar: white;
+$sidebar-bg-v-second: 0.2s;
+
+$sidebar-box-shadow-offset-x: 4px;
+$sidebar-box-shadow-color: rgba(black, 0.2);
+
+
+sidebar{
+    position:fixed;
+    background-color:#fff;
+    transition:transform .3s ease-in-out;
+    z-index:1000;top:0;
+    overflow:auto;
+    height:100%;
+    width:100%;
+    display:none;
+    box-shadow:none
+}
+sidebar.sidebar--is-open.sidebar--left,sidebar.sidebar--is-open{
+    transform:translateX(0)
+}
+sidebar.sidebar--is-open.sidebar--left{
+    box-shadow:4px 0 9px 0px rgba(0,0,0,0.2)
+}
+
+sidebar.sidebar--left{
+    left:0;transform:translateX(-100%)
+}
+
+.sidebar-bg{
+    position:fixed;
+    left:0;right:0;top:0;bottom:0;width:0;height:0;
+    background-color:black;
+    opacity:0;
+    transition:opacity 0.2s linear,width 0s linear 0.2s,height 0s linear 0.2s
+}
+.sidebar-bg.sidebar-bg--is-visible{
+    opacity:.5;width:100%;height:100%;transition:opacity 0.2s linear
+}
+/*# sourceMappingURL=sidebar.css.map */
+
+sidebar {
+	position: fixed;
+	background-color: $bg-sidebar;
+	transition: transform 0.3s ease-in-out;
+	z-index: 1000; //z-index custom
+	top: 0;
+    left:0;       /* chk if working?*/
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+	display: none;
+	box-shadow: none;
+
+	&.sidebar--is-open {
+		
+		&.sidebar--left{
+			transform: translateX(0);
+		}
+
+		&.sidebar--left {
+			box-shadow: #{$sidebar-box-shadow-offset-x} 0 9px 0px #{$sidebar-box-shadow-color};
+		}
+		
+	}
+
+	&.sidebar--left {
+		left: 0;
+		transform: translateX(-100%);
+	}
+
+}
+
+.sidebar-bg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	background-color: hotpink;
+	opacity: 0;
+	transition: opacity $sidebar-bg-v-second linear, width 0s linear $sidebar-bg-v-second, height 0s linear $sidebar-bg-v-second;
+
+	&.sidebar-bg--is-visible {
+		opacity: .5;
+		width: 100%;
+		height: 100%;
+		transition: opacity $sidebar-bg-v-second linear;
+	}
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body {
+	width: 100%;
+	min-height: 100vh;
+    font-family: Kristen ITC;
+}
+
+
+body {
+    
+    background-image: url("https://food-images.files.bbci.co.uk/food/recipes/milkshake_19447_16x9.jpg");
+    background-repeat: no-repeat;
+    background-position:top;
+    background-attachment: scroll;
+    background-color:#cccccc;
+    background-size:cover;
+    transition: background-image 0.5s;
+  
+	margin: 0;
+	overflow-x: hidden;
+	font-size: 18px;
+}
+
+h1{
+    font-family: Papyrus;
+    color: #ffb8dc;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgb(201, 0, 134);
+  }
+  
+
+.header{
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: Papyrus;
+    color: #ffb8dc;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgb(201, 0, 134);
+    height: 90px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+  
+.header-logo {
+    float: left;
+    font-size: 36px;
+    padding: 20px 40px;
+    
+}
+  
+  
+
+
+
+sidebar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  
+}
+
+sidebar a:hover {
+  
+    color: #f1f1f1;
+  }
+  
+
+.spacing {
+	padding: 15px;
+}
+
+#marqueediv{
+
+  color: rgb(250, 180, 221);
+  font-size: 45px;
+  font-family: Harlow Solid;
+  text-shadow: 2px 2px 5px  #f804af ;
+  margin-top: 50px;
+
+}
+
+footer{
+    background-color:  rgba(57, 247, 244,0.7);
+    width:100%;
+    height:30px;
+    bottom: 0;
+    position:fixed;
+    
+}
+  
+.footer-left{
+    float:left;
+    color:white;
+    font-family:Papyrus;
+    color: #ffb8dc;
+    text-shadow: 2px 2px 5px rgb(201, 0, 134);        
+    cursor: pointer;
+    font-size:20px;
+    line-height:30px;
+    padding-left: 10px;
+}
+  
+.footer-right{
+    float:right;
+    line-height:30px;
+    font-family: 'Times New Roman';
+}

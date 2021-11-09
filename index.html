@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <title>SHAKE it UP - Contest</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+  <script>
+  $(document).ready(function() {
+     $('#uploadForm').submit(function() {
+		 $("#status").empty().text("File is uploading...");
+
+        $(this).ajaxSubmit({
+
+            error: function(xhr) {
+		            status('Error: ' + xhr.status);
+            },
+
+            success: function(response) {
+					console.log(response)
+					$("#status").empty().text(response);
+            }
+	});
+
+	return false;
+    });    
+});
+  </script>
+
+  <style>
+
+    html, body,
+    ul, ol, li,
+    h1, h2, h3, h4, h5, h6, p, div {
+      margin: 0;
+     padding: 0;
+   }
+
+   body {
+      background-image: url("https://wallpapercave.com/wp/wp2365431.jpg");
+      background-repeat: no-repeat;
+      background-position:top;
+      background-attachment: fixed;
+      background-color:#cccccc;
+      background-size:cover;
+      transition: background-image 0.5s;
+  
+  	  margin: 0;
+  	  overflow-x: hidden;
+	    font-size: 18px;
+    }
+
+    header{
+     background-color: rgba(57, 247, 244,0.7);
+     height:70px;
+     width:100%;
+     position:fixed;
+     top: 0;
+     z-index: 10;
+   
+    }
+  
+   a{
+     text-decoration: none;
+   }
+  
+   .header-left a{
+     float:left;
+     color:white;
+     font-family:Papyrus;
+     color: #ffb8dc;
+     text-shadow: 2px 2px 5px rgb(201, 0, 134);
+     font-size:40px;
+     padding-top:10px;
+     cursor: pointer;
+     padding-left: 10px;
+    
+    }
+  
+   .header-right{
+     float:right;
+     margin-right:-18px;
+ 
+    }
+  
+   .header-right a{
+     color:black;
+     padding:0px 25px;
+     display: block;
+     line-height: 70px;
+     float:left;
+     font-family: Kristen ITC;
+     transition: all 0.5s;
+    }
+  
+   .header-right a:hover{
+     background-color: rgba(0,0,0,0.7);
+     color:white;
+    }
+
+    #fileupload{
+      margin-top: 100px;
+    }
+    h1{
+      padding-left: 10px;
+      font-family: Papyrus;
+      color: black;
+      font-size: 30px;
+      text-shadow: 2px 2px 5px #cc19f0;
+
+    }
+
+    #details{
+      font-family: MV Boli;
+      font-size: 25px;
+      color: black;
+      text-shadow: 2px 2px 3px #ffa1e7;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+    }
+
+    input{
+      margin-left: 10px;
+      border: 2px solid #cc19f0;
+      border-radius: 10px;
+      color: black;
+      background-color:#ffa1e79f;
+      font-size:20px;
+      cursor: pointer; 
+    }
+
+
+    
+  
+
+  </style>
+  
+</head>
+  <body>
+    <header>
+      <div class= "container">
+        
+        <div class="header-left">
+           <a href="expt2_pg1.html">SHAKE it UP</a>
+        </div>
+       <div class="header-right">
+         <a href="menutable.html">Menu</a>
+         <a href="feedback.html">Feedback</a>
+         <a href="recipes.html">Recipes</a>
+           
+       </div>
+        
+      </div>
+            
+  </header>
+  <div id="fileupload">
+    <h1>Monthly Contest</h1>
+    <p id="details">CONTEST DETAILS:<br>Show us your creativity by clicking pictures of our MilkSHAKES.<br>
+    The TOP 10 pictures will be rewared with <b>COUPONS</b>!!!<br>
+    Entries will be accepted till the <b>last date</b> of the month.<br><br>
+    Make sure that you Name your pics as your <b>username_contest</b>.</p>
+    <form id="uploadForm" enctype="multipart/form-data" action="/uploadsandy" method="post">
+      <input type="file" name="myfile" /><br/><br/>
+      <input type="submit" value="Upload" name="submit"><br/><br/>
+      <span id = "status"></span>
+    </form>
+
+
+    
+  </div>
+
+  </body>
+ 
+</html>

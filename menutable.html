@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SHAKE it UP-MenuSample</title>
+        <link rel="stylesheet" href="stylesheetMenutable.css"> 
+        <link rel="stylesheet" href="stylesheetFilter.css"> 
+
+
+
+        <script src="menutableJS.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        
+      
+    </head>
+
+    <body>
+        <h1>MENU</h1>
+        <p id="intro">
+            Come home to the best Thickshakes in town. There are innumerable combinations when it comes to making the shake you love. Choose from our menu of tasty and fulfilling delights or customize it to your preference.
+        </p>
+
+        <table id="menuTable">
+            <tr>
+                
+                <td class="menu td1">
+                    <p class= "heading">Classic Shakes</p><br>
+                    <ul>
+                        <li>Berry Delight <input class="selectchk" type= "checkbox" name="classic1" value="Yes"></li>
+                        <li>Triple choco chip <input class="selectchk" type= "checkbox" name="classic2" value="Yes"></li>
+                        <li>Crunchy Butterscotch <input class="selectchk" type= "checkbox" name="classic3" value="Yes"></li>
+    
+                    </ul>
+                    <p class="pRate">Rate : Rs.175</p>  
+                </td>
+
+                <td class="menu td2">
+                    <p class= "heading">Exotic Shakes</p><br>
+                    <ul>
+                       <li>Hazelnut cookie <input class="selectchk" type= "checkbox" name="exotic1" value="Yes"></li>
+                       <li>Redvelvet Rose <input class="selectchk" type= "checkbox" name="exotic2" value="Yes"></li>
+                       <li>Cream cheese pista <input class="selectchk" type= "checkbox" name="exotic3" value="Yes"></li>
+
+                    </ul>
+                    <p class="pRate">Rate : Rs.220</p>                
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="menu td3">
+                    <p class= "heading">Fruity Passion</p><br>
+                   <ul>
+                        <li>Pineapple Punch <input class="selectchk" type= "checkbox" name="exotic1" value="Yes"></li>
+                        <li>Lovely Lychee <input class="selectchk" type= "checkbox" name="exotic2" value="Yes"></li>
+                        <li>Strawberry Kiwi <input class="selectchk" type= "checkbox" name="exotic3" value="Yes"></li>
+
+                   </ul>
+                   <p class="pRate">Rate : Rs.250</p>                  
+                    
+
+                </td>
+
+                <td class="menu td4">
+                    
+                    <p class= "heading">Candy Crushers</p><br>
+                    <ul>
+                       <li>Kitkat Lover <input class="selectchk" type= "checkbox" name="candy1" value="Yes"></li>
+                       <li>Oreo Nutella <input class="selectchk" type= "checkbox" name="candy2" value="Yes"></li>
+                       <li>Snickers Shaker <input class="selectchk" type= "checkbox" name="candy3" value="Yes"></li>
+
+                    </ul>
+                    <p class="pRate">Rate : Rs.230</p>                
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <div class="filterDiv">
+
+            <input type="button" value="Low-High" class="filterbtn sort" onclick="lowHighFilter()">
+            <input type="button" value="Search" class="filterbtn search" onclick="location.href='menuSearchFrame.html'">
+            <input type="button" value="Calculate Price" class="filterbtn cal" onclick="calFilter()">
+
+           
+        </div>
+        <div id="lowHighDiv" style="display: none;">
+            <script>
+                angular.module('myApp1', []).controller('namesCtrl1', function($scope) {
+                  $scope.shakes = [
+                    {shake:'Exotic Shakes',rate:'220'},
+                    {shake:'Fruity passion',rate:'250'},
+                    {shake:'Classic Shakes',rate:'175'},
+                    {shake:'Candy Crushers',rate:'230'},
+                    
+                  ];
+                  $scope.orderByMe = function(x) {
+                    $scope.myOrderBy = x;
+                  }
+                });
+                </script>
+
+            <div ng-app="myApp1" ng-controller="namesCtrl1">
+
+                
+                <p>Click the headings to change the sorting order:</p>
+                    
+                <table id="sortFilterTable">
+                  <tr>
+                    <th ng-click="orderByMe('shake')">Shakes</th>
+                    <th ng-click="orderByMe('rate')">Rate</th>
+                  </tr>
+    
+                  <tr ng-repeat="x in shakes | orderBy:myOrderBy">
+                    <td>{{x.shake}}</td>
+                    <td>{{x.rate}}</td>
+                  </tr>
+                </table>
+            </div>
+
+    
+
+        </div>
+
+        <!--Search Filter-->
+<!--
+        <div id="searchDiv" style="display: none;">
+            <script>
+                angular.module('myApp2', []).controller('namesCtrl2', function($scope) {
+                    $scope.names = [
+                        'Classic Shakes',
+                        'Exotic Shakes',
+                        'Fruity Passion',
+                        'Candy Crushers',
+                    ];
+                });
+                </script>            
+
+            <div ng-app2="myApp2" ng-controller="namesCtrl2">
+                <p>Search: </p>
+                <p><input type="text" ng-model="test"></p>
+                <ul>
+                    <li ng-repeat="y in names | filter:test">
+                      {{ y }}
+                    </li>
+                </ul>
+                  
+            </div>
+       
+        </div>
+-->
+         
+        <div id="calDiv" style="display: none;">
+            <h2>Find your price:</h2>
+            <form name="calculator">
+            Shake 1: <input type="text" name="number1"><br><br>
+            Shake 2: <input type="text" name="number2"><br><br>
+            Shake 3: <input type="text" name="number3"><br><br>
+            Shake 4: <input type="text" name="number4"><br><br>
+            Shake 5: <input type="text" name="number5"><br><br>
+            
+            <input type="button" value="Total" onclick="javascript:addition();">
+            <input type="text" name="total">
+            </form>    
+
+            <script language="javascript" type="text/javascript">
+                function addition(){
+                a=Number(document.calculator.number1.value);
+                b=Number(document.calculator.number2.value);
+                c=Number(document.calculator.number3.value);
+                d=Number(document.calculator.number4.value);
+                e=Number(document.calculator.number5.value);
+                f=a+b+c+d+e;
+                document.calculator.total.value=f;
+                }
+                </script>
+                    
+        </div>
+
+            
+
+
+        
+        <div>
+            <marquee id="tag">New Shakes coming soon!!!...</marquee>
+
+        </div>
+                 
+    </body>
+
+</html>

@@ -1,0 +1,88 @@
+body{
+    background-color: #f0c9e7;
+}
+h1{
+    font-family: Papyrus;
+    color: #ff00c4;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+#intro{
+    text-align: center;
+    font-size: 30px;
+    font-family: Gloucester MT;
+    padding:10px;
+}
+
+.heading{
+    font-family: Kristen ITC;
+    color: black;
+    text-shadow: 2px 2px 5px orange;
+}
+.menu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: MV Boli;
+    font-style: italic;
+    
+}
+
+.div1{
+    background-image: url("https://i2.wp.com/www.eatthis.com/wp-content/uploads/2020/01/how-to-make-a-milkshake-5.jpg?fit=1200%2C879&ssl=1");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7; 
+    width: 550px;
+    
+    
+}
+ul{
+    background-color:white;
+    opacity: 0.7;
+    width:auto;
+}
+.div2{
+    background-image: url("https://lh3.googleusercontent.com/L0bi82LPD3vrht9vJxuadxQ_Iw9GRpg33Jpvv6x--zPCiCltbol9JkP7iS5NPIL4FH156yQAn6TLeihv0dogUHtKY-c=w800");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 550px;
+
+    
+    
+
+}
+
+.div3{
+    background-image: url("https://img.etimg.com/thumb/width-1200,height-900,imgsize-1604599,resizemode-1,msid-65237848/magazines/panache/how-milkshakes-made-their-way-to-world-domination.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 550px;
+    
+    
+
+}
+
+.div4{
+    background-image: url("https://images.eatthismuch.com/site_media/img/971403_tabitharwheeler_21276d22-69c2-49ec-9abd-6ae2bf363895.jpg");
+    background-size: 500px;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 550px;
+
+}
+
+.menu ul{
+    background-color:white;
+    opacity: 0.7;
+    width:fit-content;
+
+}
+
+.menu p{
+    text-shadow: 2px 2px 5px red;
+}
